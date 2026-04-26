@@ -3,14 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://cm00j8m05wo1t" path="res://Tscn/backgorund.tscn" id="1_2ha8l"]
 [ext_resource type="Script" uid="uid://d1087dl0jmt68" path="res://main_2.gd" id="1_eawnh"]
 [ext_resource type="PackedScene" uid="uid://cptdx1m2b5igr" path="res://node_2d.tscn" id="3_eawnh"]
+[ext_resource type="Script" uid="uid://dfc0836fqt3ry" path="res://funfact.gd" id="4_3jbrt"]
 [ext_resource type="PackedScene" uid="uid://btv36ohi38qqy" path="res://collectables.tscn" id="4_8efqd"]
 [ext_resource type="PackedScene" uid="uid://bhm8ilu6a8r7g" path="res://Tscn/progress_bar.tscn" id="5_donj0"]
 [ext_resource type="AudioStream" uid="uid://dwhlssj1itbls" path="res://Extras/WhatsApp Audio 2026-04-10 at 10.53.15.mp3" id="6_11jtl"]
+[ext_resource type="Script" uid="uid://eiqfy2rke4p8" path="res://funfact_2.gd" id="7_qbdou"]
+[ext_resource type="Script" uid="uid://cc68tdliclmfb" path="res://funfact_3.gd" id="8_5s2t1"]
 [ext_resource type="FontFile" uid="uid://8snmw24doosa" path="res://Player/Minecrafter-MA3Dw.ttf" id="8_donj0"]
 [ext_resource type="Script" uid="uid://coimhnpp4n2ch" path="res://label.gd" id="9_hpglo"]
+[ext_resource type="Script" uid="uid://bmdsanxxj6agg" path="res://funfact_4.gd" id="9_ioikw"]
 [ext_resource type="Texture2D" uid="uid://c4xugekk7whea" path="res://Enviroment/backgrounds/Platform.png" id="10_77tfw"]
 [ext_resource type="PackedScene" uid="uid://dojqept2dxvpx" path="res://Tscn/draw.tscn" id="11_t5rjf"]
-[ext_resource type="PackedScene" uid="uid://cp6hjc7qq2dau" path="res://terrain.tscn" id="12_3jbrt"]
+[ext_resource type="PackedScene" uid="uid://f3p8q3reggdf" path="res://Tscn/level.tscn" id="12_3jbrt"]
 [ext_resource type="PackedScene" uid="uid://dj2hjd21vcm6t" path="res://damage.tscn" id="12_77tfw"]
 
 [sub_resource type="Animation" id="Animation_hpglo"]
@@ -58,7 +62,7 @@ script = ExtResource("1_eawnh")
 [node name="Backgorund" parent="." unique_id=144487816 instance=ExtResource("1_2ha8l")]
 
 [node name="Rover" parent="." unique_id=1229251134 instance=ExtResource("3_eawnh")]
-position = Vector2(113, -48)
+position = Vector2(113, 93)
 
 [node name="Camera2D" type="Camera2D" parent="Rover" unique_id=1801062252]
 position = Vector2(480, 489)
@@ -79,6 +83,58 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" parent="CanvasLayer" unique_id=269087249 instance=ExtResource("5_donj0")]
 
+[node name="Funfact" type="Label" parent="CanvasLayer" unique_id=648007134]
+offset_left = 617.0
+offset_top = 415.0
+offset_right = 1609.0
+offset_bottom = 685.0
+theme_override_fonts/font = ExtResource("8_donj0")
+theme_override_font_sizes/font_size = 45
+text = "The Moon has mountains 
+taller than Mount Everest"
+script = ExtResource("4_3jbrt")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Funfact" unique_id=1962778970]
+
+[node name="Funfact2" type="Label" parent="CanvasLayer" unique_id=1263880700]
+offset_left = 617.0
+offset_top = 415.0
+offset_right = 1609.0
+offset_bottom = 685.0
+theme_override_fonts/font = ExtResource("8_donj0")
+theme_override_font_sizes/font_size = 45
+text = "A day on the Moon lasts about 
+29 Earth days"
+script = ExtResource("7_qbdou")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Funfact2" unique_id=1479797872]
+
+[node name="Funfact3" type="Label" parent="CanvasLayer" unique_id=700722018]
+offset_left = 617.0
+offset_top = 415.0
+offset_right = 1609.0
+offset_bottom = 685.0
+theme_override_fonts/font = ExtResource("8_donj0")
+theme_override_font_sizes/font_size = 45
+text = "Footprints on the Moon can last 
+millions of years"
+script = ExtResource("8_5s2t1")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Funfact3" unique_id=785609951]
+
+[node name="Funfact4" type="Label" parent="CanvasLayer" unique_id=605447529]
+offset_left = 617.0
+offset_top = 415.0
+offset_right = 1609.0
+offset_bottom = 685.0
+theme_override_fonts/font = ExtResource("8_donj0")
+theme_override_font_sizes/font_size = 45
+text = "The Moon has weaker gravity 
+than Earth"
+script = ExtResource("9_ioikw")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Funfact4" unique_id=405378945]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1154455955]
 stream = ExtResource("6_11jtl")
 volume_db = -18.735
@@ -90,25 +146,25 @@ parameters/looping = true
 position = Vector2(1951, 668)
 
 [node name="Collectables3" parent="Node" unique_id=1743866560 instance=ExtResource("4_8efqd")]
-position = Vector2(14918, 694)
+position = Vector2(9274, 598)
 
 [node name="Collectables4" parent="Node" unique_id=954159189 instance=ExtResource("4_8efqd")]
-position = Vector2(12488, 677)
+position = Vector2(7703, 503)
 
 [node name="Collectables5" parent="Node" unique_id=1809597354 instance=ExtResource("4_8efqd")]
-position = Vector2(7526, 522)
+position = Vector2(5794, 533)
 
 [node name="Collectables7" parent="Node" unique_id=2092973301 instance=ExtResource("4_8efqd")]
-position = Vector2(10231, 806)
+position = Vector2(11287, 693)
 
 [node name="Collectables6" parent="Node" unique_id=2031004560 instance=ExtResource("4_8efqd")]
 position = Vector2(3746, 721)
 
 [node name="Label" type="Label" parent="." unique_id=36664458]
-offset_left = 567.0
-offset_top = 327.0
-offset_right = 1217.0
-offset_bottom = 520.0
+offset_left = 592.0
+offset_top = 324.0
+offset_right = 1277.0
+offset_bottom = 517.0
 theme_override_fonts/font = ExtResource("8_donj0")
 theme_override_font_sizes/font_size = 69
 text = "Collect all the Data
@@ -138,39 +194,43 @@ autoplay = &"RESET"
 [node name="Node2" type="Node" parent="." unique_id=341440145]
 
 [node name="damage" parent="Node2" unique_id=1494937218 instance=ExtResource("12_77tfw")]
-position = Vector2(6627, 925)
+position = Vector2(6614, 924)
 
 [node name="damage2" parent="Node2" unique_id=1399880494 instance=ExtResource("12_77tfw")]
-position = Vector2(6680.0005, 975.99994)
+position = Vector2(6667.0005, 975)
 
 [node name="damage3" parent="Node2" unique_id=2132582401 instance=ExtResource("12_77tfw")]
-position = Vector2(6747.0005, 1008.99994)
+position = Vector2(6734.0005, 1008)
 
 [node name="damage4" parent="Node2" unique_id=952920310 instance=ExtResource("12_77tfw")]
-position = Vector2(6819, 1019)
+position = Vector2(6806, 1018)
 
 [node name="damage5" parent="Node2" unique_id=1319241442 instance=ExtResource("12_77tfw")]
-position = Vector2(6892, 1025)
+position = Vector2(6879, 1024)
 
 [node name="damage6" parent="Node2" unique_id=915465820 instance=ExtResource("12_77tfw")]
-position = Vector2(6967.0005, 1026)
+position = Vector2(6954.0005, 1025)
 
 [node name="damage7" parent="Node2" unique_id=553150879 instance=ExtResource("12_77tfw")]
-position = Vector2(7032, 1000)
+position = Vector2(7019, 999)
 
 [node name="damage8" parent="Node2" unique_id=550165895 instance=ExtResource("12_77tfw")]
-position = Vector2(7086, 961)
+position = Vector2(7073, 960)
 
 [node name="damage9" parent="Node2" unique_id=1650983625 instance=ExtResource("12_77tfw")]
-position = Vector2(7130, 930)
+position = Vector2(7117, 929)
 
 [node name="damage10" parent="Node2" unique_id=1879117680 instance=ExtResource("12_77tfw")]
-position = Vector2(7158, 911)
+position = Vector2(7145, 910)
 
 [node name="damage11" parent="Node2" unique_id=256626945 instance=ExtResource("12_77tfw")]
-position = Vector2(7165, 867)
+position = Vector2(7152, 866)
 
-[node name="Terrain" parent="." unique_id=1229517302 instance=ExtResource("12_3jbrt")]
-position = Vector2(9, 173)
+[node name="level" parent="." unique_id=341777473 instance=ExtResource("12_3jbrt")]
+position = Vector2(-38, 15)
 
+[connection signal="timeout" from="CanvasLayer/Funfact/Timer" to="CanvasLayer/Funfact" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Funfact2/Timer" to="CanvasLayer/Funfact2" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Funfact3/Timer" to="CanvasLayer/Funfact3" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Funfact4/Timer" to="CanvasLayer/Funfact4" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

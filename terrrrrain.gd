@@ -8,5 +8,6 @@ extends StaticBody2D
 func _ready() -> void:
 	var points=path.curve.get_baked_points()
 	
+	
 	col.polygon=points
 	polygon_2d.polygon=points

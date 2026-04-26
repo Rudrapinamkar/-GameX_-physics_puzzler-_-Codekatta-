@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dw41s6lklcil3" path="res://Enviroment/Solar_system/Uranus.png" id="6_4csmj"]
 [ext_resource type="Texture2D" uid="uid://cn03ds347swlf" path="res://Enviroment/Solar_system/jupiter.png" id="7_otx3e"]
 [ext_resource type="Texture2D" uid="uid://7pk0x11q1ea5" path="res://Enviroment/backgrounds/space.png" id="7_x3rh8"]
-[ext_resource type="AudioStream" uid="uid://rufo0w53n3qi" path="res://Extras/Neptune.mp3 (online-audio-converter.com).mp3" id="8_kkdux"]
 [ext_resource type="PackedScene" uid="uid://dojqept2dxvpx" path="res://Tscn/draw.tscn" id="9_4csmj"]
 
 [node name="Neptune" type="Node2D" unique_id=1392167632]
@@ -177,8 +176,6 @@ scale = Vector2(0.43041235, 0.43041238)
 texture = ExtResource("6_4csmj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=909723751]
-stream = ExtResource("8_kkdux")
 autoplay = true
-parameters/looping = true
 
 [node name="Draw" parent="." unique_id=1349148927 instance=ExtResource("9_4csmj")]
